@@ -16,7 +16,6 @@ bool isPalindrome(char * s){
     char temp1 = 0;
     char temp2 = 0;
     int count = 0;
-
     //indexing is actually wrong i guess cuz can't really find the middle 
     while(first_index <= last_index){
         if(temp1 == 0){

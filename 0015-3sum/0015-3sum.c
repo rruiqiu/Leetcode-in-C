@@ -17,7 +17,7 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
     qsort(nums,  numsSize, sizeof(int), comparator);
     int size = 0;
     //int **arr = 0;
-    int capacity = 50000;
+    int capacity = 30000;
     int **arr = malloc(capacity * sizeof(int *));
     //-4-1-1012
 //    for(int i=0;i< numsSize;i++){
@@ -36,7 +36,7 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
                 first_index++;
             }else{
                 size++;
-                //arr = realloc(arr,(size)*sizeof(int*));
+                //arr = realloc(arr,(size)*sizeof(int*)); // this would also work for a space criticial envrionment. but right now we are looking for performance, then use this
                 arr[size-1] = (int*)malloc(3*sizeof(int));
                 arr[size-1][0]=nums[i];
                 arr[size-1][1]=nums[first_index];

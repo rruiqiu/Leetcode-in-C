@@ -14,9 +14,6 @@ int maxProfit(int* prices, int pricesSize){
         if(firstpointer > prices[i]){
             firstpointer = prices[i];            
         }
-        
     }
     return maxProfit;
-    
-        
 }
